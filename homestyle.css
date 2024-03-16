@@ -78,6 +78,11 @@ body{
  opacity: 1;
 
 }
+
+.left {
+  width: 40%;
+}
+
 section{
 
   padding: 10rem 9% 2rem;

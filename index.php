@@ -1,3 +1,10 @@
+<?php
+if(!isset($_SESSION))
+{
+  session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,22 +27,15 @@
             <img src="Logo.png" alt="Logo" />
           </div>
           <div class="container-1">
-            <div class="home border"><a href="#popular">Home</a></div>
-            <div class="home border"><a href="#popular">About Us</a></div>
-            <div class="home border"><a href="#popular">FAQ</a></div>
+            <div class="home border"><a href="Home.html">Home</a></div>
+            <div class="home border"><a href="ContactUss.php">About Us</a></div>
+            <div class="home border"><a href="#">FAQ</a></div>
+            
           
 
+            <?php include '../includes/navbar.php'; ?>
           
-            
-            <div class="menu">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
       </header>
         <div class="explore"><a href="#">EXPLORE</a></div>
     
@@ -105,5 +105,7 @@ First episode date: October 28, 2009 (USA)
           </div>
           
     </div>
+
+    <?php include("../includes/footer.php"); ?>
   </body>
 </html>

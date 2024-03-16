@@ -26,10 +26,6 @@
             <li class="nav-link"><a href="">About Us</a></li>
             <li class="nav-link"><a href="./contact.html">FAQ</a></li>
             <li class="sociallinkContainer">
-                <img class="sociallink" src="./img/fabook-icon-white.svg" alt="">
-                <img class="sociallink" src="./img/twitter-icon-white.svg" alt="">
-                <img class="sociallink" src="./img/inkedin-icon-white.svg" alt="">
-                <img class="sociallink" src="./img/whatsapp-icon-white.svg" alt="">
             </li>
         </ul>
         <div id="barContainer">

@@ -19,11 +19,20 @@
     <a href="#" id="">AboutUs</a>
     <a href="#" id="">Faq</a>
     <a href="#" id="">Series</a>
+    <a href="LoginRegister.php" id="">Sing Up</a>
   </nav>
   <div class="invisible"></div>
  
 
 </header>
+
+<div class="left">
+                <br><br><br>
+                <h2 id="text6">Animes</h2>
+                <img class="images" id="slideshow">
+                <button id="bt1" onclick="changeImg()">Next</button>
+            </div>
+
 <section class="home">
   <div class="text-content">
     <h2>The Akatsuki</h2>
@@ -57,7 +66,22 @@
 
 
 </section>
+
+
+<script>
+  let i=0;
+
+  function changeImg(){
+  let imgArray = ['luffy.jfif','berserk.jfif','Narutosh.jfif'].src =imgArray[i];
+
+  if(i<imgArray.length -1){
+    i++
+  }else
+  {
+    i=0;
+  }
+}
+document.addEventListener(onload, changeImg());
+</script>
 </body>
-
-
 </html>

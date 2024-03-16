@@ -1,3 +1,33 @@
+<?php
+if(!isset($_SESSION)){
+    session_start();
+}
+
+require();
+if(isset($_POST['submit'])){
+    $Modeli = new Modeli();
+
+    $Modeli->setEmail($_POST['Email']);
+    $kontrollo = $Modeli->kontrollo();
+
+    if($kontrollo==true){
+        $_SESSION['Email'] = true;
+        session_destroy();
+
+    }else{
+        $Modeli->setUsername($_POST['Username']);
+        $Modeli->setEmail($_POST['Email']);
+        $Modeli->setPassword($_POST['Passwordi']);
+
+        $Modeli->insertoDhenat();
+        session_destroy();
+        
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -6,6 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7be85ed243.js"></script>
 
     <title>Login Form</title>
     
@@ -17,8 +48,23 @@
         <div class="flip-card-inner">
             <div class="box-login">
                 <ul>
-                    <form action="" method="get">
-                        <h1>LOGIN</h1>
+                    <form name="Login" action="LoginRegister.php" method="POST" onsubmit="validimiLogIn()">
+                      <?php
+                      if(isset($_SESSION['PasswordGabim']))
+                      {
+                        echo
+                        '<script>alert("Passwordi eshte gabim!");</script>';
+                      }
+                      if(isset($_SESSION['Emaili Eshte Gabim']))
+                      {
+                        echo
+                        '<script>alert("Emaili eshte gabim!");</script>';
+
+                      }
+                        
+                      ?>
+                      <h1>LOGIN</h1>
+
                         <div class="email-login">
                             <input class="inpt" type="email" name="email" id="" placeholder="Email " required>
                             <i class='fa fa-envelope'></i>
@@ -35,7 +81,7 @@
                             <label for="checkbox">Remember me</label>
                             <a href="#">Forget Password?</a>
                         </div>
-                        <button type="submit" class="btn">LOGIN</button>
+                        <button type="submit" onsubmit="validimiLogin()" class="btn">LOGIN</button>
                     </form>
                     <div class="register-link">
                         <p>Dont have an account? <a href="#" onclick="flip()">Sign Up</a></p>
@@ -44,8 +90,23 @@
             </div>
             <div class="box-signup">
                 <ul>
-                    <form action="" method="get">
-                        <h1>SIGN UP</h1>
+                    <form name="Signup" action="LoginRegister.php" method="POST" onsubmit="">
+                      
+                    <?php
+            if (isset($_SESSION['regMeSukses'])) {
+              echo '<script>alert("U regjistrua me sukses!");</script>';
+      }
+      if (isset($_SESSION['emailkziston'])) {
+        echo '<script>alert("Email ekziston");</script>';
+      }
+      elseif(isset($_SESSION['nrleternjoftimitEkziston'])) {
+        echo '<script>alert("Username-i ekziston");</script>';
+      }
+      ?>         
+                    
+                    
+                    
+                    <h1>SIGN UP</h1>
                         <div class="user-signup">
                             <input class="inpt" type="text" name="" id="username" placeholder="User Name">
                             <i class="fa fa-user"></i>
