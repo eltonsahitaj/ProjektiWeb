@@ -6,6 +6,10 @@
     <title>ContactUs</title>
     <link rel="stylesheet" href="./commonStyle.css">
     <link rel="stylesheet" href="style3.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 <body>
@@ -78,21 +82,45 @@
         
     <!-- footer -->
     <footer>
-        <div class="joinSection">
-            <div class="joinDesc">
-                <h1 class="sectionHeader">Join with us</h1>
-                <p class="sectionPara">
-                    Once you have created your account, you can purchase Anime Gifts from website
-                </p>
+        <div class="d1">
+            <div class="titull">
+                <div class="lista">
+                    <h4>Crimson's</h4>
+                    <ul>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Crimson's blog</a></li>
+                    </ul>
+                </div>
+                <div class="lista">
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li><a href="../Faq\Faq.php">FAQ</a></li>
+                        <li><a href="../Contactus/Kontakt.php" onclick="con()">Crimson's Support</a></li>
+                        <li><a href="../Contactus/Kontakt.php" onclick="con()">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="listap">
+                    <h4>Payment Methods</h4>
+                    <div class="ulp">
+                        <a href=""><i class='bx bxl-visa'></i></a>
+                        <a href=""><i class='bx bxl-mastercard' ></i></a>
+                        <a href=""><i class='bx bxl-bitcoin' ></i></a>
+                        <a href=""><i class='bx bxl-paypal' ></i></a>
+                    </div>
+                </div>
+                <div class="lista">
+                    <h4>Follow us</h4>
+                    <div class="rrjetet">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <button class="btn primaryBtn">JOIN NOW</button>
         </div>
-
-        <div class="footerCopyright">
-             <p>&copy; 2023 AnimePage By EltonSahitaj<a href="#" class="developedBy">Anime Insider</a>.</p>
-        </div>
-    </footer>
-
+</footer>
     <script >
 
     </script>    

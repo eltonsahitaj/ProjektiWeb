@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
                             <label for="checkbox">Remember me</label>
                             <a href="#">Forget Password?</a>
                         </div>
-                        <button type="submit" onsubmit="validimiLogin()" class="btn">LOGIN</button>
+                        <button type="submit" onsubmit="validimiLogin()" class="btn" ><a> href="index.php"></a>LOGIN</button>
                     </form>
                     <div class="register-link">
                         <p>Dont have an account? <a href="#" onclick="flip()">Sign Up</a></p>
@@ -93,6 +93,7 @@ if(isset($_POST['submit'])){
                     <form name="Signup" action="LoginRegister.php" method="POST" onsubmit="">
                       
                     <?php
+                    print_r($_POST);
             if (isset($_SESSION['regMeSukses'])) {
               echo '<script>alert("U regjistrua me sukses!");</script>';
       }
