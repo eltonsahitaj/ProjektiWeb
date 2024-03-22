@@ -1,6 +1,6 @@
 <?php
 
-class db{
+class dbcon{
 
 
   private $conn = null;
@@ -8,7 +8,7 @@ class db{
 
   private $host = 'localhost';
 
-  private $dbname = 'loginregister';
+  private $dbname = 'dbcon';
 
   private $UserName = 'root';
 
@@ -28,7 +28,7 @@ class db{
     }
     
      
-     $testDB = new db();
+     $testDB = new dbcon();
      $testDB->connDB();
      ?>
 
